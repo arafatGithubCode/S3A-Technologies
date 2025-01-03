@@ -1,0 +1,77 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.menu {
+  -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
+  background: rgba(0, 0, 0, 0.1);
+
+  @include media-breakpoint-down(lg) {
+    @include gradient;
+    animation: menuFadeDownBg 0.3s ease-in-out;
+
+    .nav-item {
+      padding: 0.2rem 0.7rem !important;
+    }
+  }
+
+  .menu-icon {
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    i {
+      font-size: 2rem;
+      color: rgba($white, 0.9);
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .navbar-brand {
+    width: 5rem;
+  }
+  .nav-item {
+    padding: 0 0.7rem;
+
+    a {
+      color: rgba($white, 0.7);
+      padding: 0 0.7rem;
+      font-family: "Poppins", sans-serif;
+      text-transform: capitalize;
+      font-weight: 600;
+
+      &:hover {
+        color: $white;
+      }
+    }
+    .active {
+      color: $white;
+    }
+
+    i {
+      display: block;
+      font-size: 1.2rem;
+      color: rgba($white, 0.7);
+      cursor: pointer;
+      transform: translateY(-0.4rem);
+      &:hover {
+        color: $white;
+      }
+
+      @include media-breakpoint-down(lg) {
+        transform: translateX(0.9rem);
+      }
+    }
+  }
+}
+
+.menu-fade-down-bg {
+  @include gradient;
+  animation: menuFadeDownBg 0.3s ease-in-out;
+}

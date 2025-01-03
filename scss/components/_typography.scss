@@ -1,0 +1,27 @@
+// Import Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400;500&family=Open+Sans:wght@400;700&display=swap");
+
+// Font Variables
+$title-font: "Poppins", sans-serif;
+$subtitle-font: "Raleway", sans-serif;
+$description-font: "Open Sans", sans-serif;
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+}
+
+h2,
+h3 {
+  font-family: $subtitle-font;
+}
+
+p,
+span {
+  font-family: $description-font;
+}

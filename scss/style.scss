@@ -1,0 +1,19 @@
+// IMPORT THE CUSTOMIZATION
+@use "./custom" as *;
+
+// IMPORT THE COMPONENTS
+@use "./components/typography" as *;
+@use "./components/animations" as *;
+@use "./components/buttons" as *;
+
+// IMPORT THE SECTIONS
+@use "./sections/navbar" as *;
+@use "./sections/hero" as *;
+@use "./sections/feature-highlight" as *;
+@use "./sections/services-explore" as *;
+@use "./sections/contact-CTA" as *;
+@use "./sections/testimonial" as *;
+@use "./sections/faq" as *;
+@use "./sections/portfolio" as *;
+@use "./sections/get-started" as *;
+@use "./sections/footer" as *;

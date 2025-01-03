@@ -1,0 +1,7 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.accordion-button:not(.collapsed) {
+  @include gradient;
+  color: $white;
+}

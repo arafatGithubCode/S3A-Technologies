@@ -1,0 +1,112 @@
+@use "../custom" as *;
+
+// ABSOLUTE FULL
+@mixin absoluteFull {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// ABSOLUTE CENTER
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// TRANSITION PROPERTY
+@mixin transitionProperty {
+  transition-duration: 1s;
+  transition-property: all;
+}
+
+// GRADIENT MIXIN
+@mixin gradient {
+  background: linear-gradient(150deg, #a8aaf1 0%, #2c31ff 20%, #2c31ff 100%);
+}
+
+// FEATURE POSITION
+@mixin featurePosition {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+}
+
+// FEATURE BOX 1: GRADIENT
+@mixin featureBox1 {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#6f42c1),
+    to(#cfa8ff)
+  );
+  background: linear-gradient(0deg, #6f42c1 0%, #cfa8ff 100%);
+}
+
+// FEATURE BOX 2: GRADIENT
+@mixin featureBox2 {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#00a2f3),
+    to(#a8f1f1)
+  );
+  background: linear-gradient(0deg, #00a2f3 0%, #a8f1f1 100%);
+}
+
+// FEATURE BOX 3: GRADIENT
+@mixin featureBox3 {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#2c31ff),
+    to(#a8aaf1)
+  );
+  background: linear-gradient(0deg, #2c31ff 0%, #a8aaf1 100%);
+}
+
+// FEATURE BOX 4: GRADIENT
+@mixin featureBox4 {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#20c997),
+    to(#7bf8d7)
+  );
+  background: linear-gradient(0deg, #20c997 0%, #7bf8d7 100%);
+}
+
+// FEATURE BOX 5: GRADIENT
+@mixin featureBox5 {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#47c920),
+    to(#8ce471)
+  );
+  background: linear-gradient(0deg, #47c920 0%, #8ce471 100%);
+}
+
+// FEATURE BOX 6: GRADIENT
+@mixin featureBox6 {
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#8d00eba9),
+    to(#aa77ac)
+  );
+  background: linear-gradient(0deg, #8d00eba9 0%, #aa77ac 100%);
+}

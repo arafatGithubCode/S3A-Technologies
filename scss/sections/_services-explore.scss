@@ -1,0 +1,113 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/animations" as *;
+
+// SERVICES EXPLORE
+.explore-services {
+  .block {
+    position: relative;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.4),
+      0 10px 20px rgba(0, 0, 0, 0.3);
+
+    .video-box {
+      position: relative;
+
+      a {
+        @include absoluteCenter;
+
+        span {
+          i {
+            font-size: 6rem;
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .text-content {
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(md) {
+          font-size: 1.1rem;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 1.5rem;
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: 1.7rem;
+        }
+      }
+
+      p {
+        text-align: justify;
+        color: $white;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8), 0 3px 8px rgba(0, 0, 0, 0.5),
+        0 12px 24px rgba(0, 0, 0, 0.4);
+      transform: translateY(-4px);
+    }
+  }
+
+  .block1 {
+    @include featureBox1;
+  }
+  .block2 {
+    @include featureBox2;
+  }
+  .block3 {
+    @include featureBox3;
+  }
+  .block4 {
+    @include featureBox4;
+  }
+  .block5 {
+    @include featureBox6;
+  }
+}
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  border: 0.55rem solid $white;
+  border-radius: 50%;
+  animation: pulse-border 1.5s linear infinite;
+
+  &--border-1 {
+    animation-delay: 1s;
+  }
+  &--border-2 {
+    animation-delay: 1.5s;
+  }
+}
+
+[data-bs-theme="dark"] {
+  .block {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.6),
+      0 1px 3px rgba(255, 255, 255, 0.4), 0 10px 20px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 6px 10px rgba(255, 255, 255, 0.8),
+        0 3px 8px rgba(255, 255, 255, 0.5), 0 12px 24px rgba(255, 255, 255, 0.4);
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.text-white-hover:hover {
+  color: white !important;
+}
